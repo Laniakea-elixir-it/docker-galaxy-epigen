@@ -1,6 +1,12 @@
 ---
 - hosts: localhost
   connection: local
+  tasks:
+    - ini_file:
+        dest: '/home/galaxy/galaxy/config/galaxy.ini'
+        section: 'app:main'
+        option: 'brand'
+        value: 'Epigen'
   roles:
     - role: indigo-dc.galaxycloud-tools
       galaxy_flavor: 'galaxy-epigen'
