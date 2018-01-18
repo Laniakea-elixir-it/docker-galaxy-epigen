@@ -1,4 +1,4 @@
-FROM mtangaro/docker-galaxycloud-epigen:NGS_mapping
+FROM mtangaro/docker-galaxycloud-epigen:NGS_samtools
 
 MAINTAINER ma.tangaro@ibiom.cnr.it
 
