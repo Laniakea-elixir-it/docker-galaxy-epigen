@@ -1,4 +1,4 @@
-FROM mtangaro/docker-galaxycloud-epige-RNAanalysis
+FROM mtangaro/docker-galaxycloud-epige-rna-analysis
 
 MAINTAINER ma.tangaro@ibiom.cnr.it
 
