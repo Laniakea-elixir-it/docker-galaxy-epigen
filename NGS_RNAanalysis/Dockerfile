@@ -1,4 +1,4 @@
-FROM mtangaro/docker-galaxycloud-epigen-QCandManipulation
+FROM mtangaro/docker-galaxycloud-epigen-qcandmanipulation
 
 MAINTAINER ma.tangaro@ibiom.cnr.it
 
