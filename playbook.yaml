@@ -7,11 +7,23 @@
         section: 'app:main'
         option: 'brand'
         value: 'Epigen'
+      when: GALAXY_VERSION == 'release_17.05'
   roles:
     - role: indigo-dc.galaxycloud-tools
+      GALAXY_VERSION: 'release_17.05'
       galaxy_flavor: 'galaxy-epigen'
       move_datasets: false
-      Galaxy_flavor_recipe_branch: 'devel'
+      Galaxy_flavor_recipe_branch: 'master'
       #create_bootstrap_user: true
 
     - role: indigo-dc.galaxycloud-tooldeps
+
+    - role: indigo-dc.galaxycloud-refdata
+      get_refdata: 'true'
+      refdata_dir: '/cvmfs'
+      refdata_repository_name: 'elixir-italy.galaxy.refdata'
+      refdata_provider_type: 'cvmfs'
+      refdata_cvmfs_server_url: '90.147.102.186'
+      refdata_cvmfs_repository_name: 'elixir-italy.galaxy.refdata'
+      refdata_cvmfs_key_file: 'elixir-italy.galaxy.refdata.pub'
+      refdata_cvmfs_proxy_url: 'DIRECT'
