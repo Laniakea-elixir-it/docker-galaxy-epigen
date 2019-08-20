@@ -1,5 +1,5 @@
-docker-galaxycloud-epigen
-=========================
+docker-galaxy-epigen
+====================
 Docker for epigen galaxy flavor
 
 Build order

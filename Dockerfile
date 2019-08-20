@@ -1,4 +1,4 @@
-FROM laniakeacloud/galaxy:18.05
+FROM laniakeacloud/galaxy-epigen:ngs-samtools
 
 MAINTAINER ma.tangaro@ibiom.cnr.it
 
@@ -6,8 +6,6 @@ ENV container docker
 
 COPY ["playbook.yaml","/"]
 
-RUN ansible-galaxy install indigo-dc.galaxycloud-tools
-RUN ansible-galaxy install indigo-dc.galaxycloud-tooldeps
 RUN ansible-galaxy install indigo-dc.cvmfs-client
 RUN ansible-galaxy install indigo-dc.galaxycloud-refdata
 
