@@ -10,14 +10,14 @@ WORKDIR /galaxy-central
 
 RUN add-tool-shed --url 'http://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool Shed'
 
-RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/galaxy-ngs-base.yml -O $GALAXY_ROOT/tools1.yml
-RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/NGS_bedtools.yml -O $GALAXY_ROOT/tools2.yml
-RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/NGS_DEEPtools.yml -O $GALAXY_ROOT/tools3.yml
-RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/NGS_mapping.yml -O $GALAXY_ROOT/tools4.yml
-RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/NGS_peakcalling.yml -O $GALAXY_ROOT/tools5.yml
-RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/NGS_QCandmanipulation.yml -O $GALAXY_ROOT/tools6.yml
-RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/NGS_RNAanalysis.yml -O $GALAXY_ROOT/tools7.yml
-RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/NGS_samtools.yml  -O $GALAXY_ROOT/tools8.yml
+RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/galaxy-ngs-base.yml -O $GALAXY_ROOT/tools1.yaml
+RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/NGS_bedtools.yml -O $GALAXY_ROOT/tools2.yaml
+RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/NGS_DEEPtools.yml -O $GALAXY_ROOT/tools3.yaml
+RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/NGS_mapping.yml -O $GALAXY_ROOT/tools4.yaml
+RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/NGS_peakcalling.yml -O $GALAXY_ROOT/tools5.yaml
+RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/NGS_QCandmanipulation.yml -O $GALAXY_ROOT/tools6.yaml
+RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/NGS_RNAanalysis.yml -O $GALAXY_ROOT/tools7.yaml
+RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-epigen/NGS_samtools.yml  -O $GALAXY_ROOT/tools8.yaml
 
 
 RUN install-tools $GALAXY_ROOT/tools1.yaml && \
